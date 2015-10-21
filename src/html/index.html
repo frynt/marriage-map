@@ -13,6 +13,55 @@
     <!-- CSS -->
     <link href="../css/main.css" rel="stylesheet">
     <link href="../css/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- BOF Angular APP -->
+
+    <!-- BOF angular libs -->
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src='../../bower_components/lodash/lodash.min.js'></script>
+    <script src='../../bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
+    <script src='../../bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+    <script src='../../bower_components/angular-bootstrap/ui-bootstrap.min.js'></script>
+    <script src='../../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'></script>
+    <link href="../../bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet">
+    <!-- EOF angular libs -->
+
+    <!-- BOF angular app -->
+    <script src="../../src/angular/app/app.js"></script>
+    <script src="../../src/angular/app/conf.js"></script>
+    <script src="../../src/angular/app/routes.js"></script>
+
+    <!-- BOF angular utils -->
+    <script src="../../src/angular/util/utilArrayService.js"></script>
+    <script src="../../src/angular/util/utilStringService.js"></script>
+    <script src="../../src/angular/util/utilGeoService.js"></script>
+    <!-- EOF angular utils -->
+    
+    <!-- BOF angular app -->
+
+    <!-- BOF navigation -->
+    <script src="../../src/angular/navigation/navigationController.js"></script>
+    <!-- EOF navigation -->
+
+    <!-- BOF map -->
+    <script src="../../src/angular/map/mapController.js"></script>
+    <script src="../../src/angular/map/mapStylesService.js"></script>
+    <script src="../../src/angular/map/mapService.js"></script>
+    <!-- EOF map -->
+
+     <!-- BOF poi -->
+    <script src="../../src/angular/poiInfo/poiInfoController.js"></script>
+    <script src="../../src/angular/poiInfo/poiInfoService.js"></script>
+    <!-- EOF poi -->
+
+    <!-- EOF Angular APP -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,45 +71,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Journée</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Où dormir</button>
-          </div>
-          <div class="btn-group" role="group">
-            <button type="button" class="btn btn-default">Je viens !</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div id="map"></div>
-    <div class="modal fade" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            <p>One fine body&hellip;</p>
-            <a href="mailto:test@test.com">mail ! </a>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-      </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <script type="text/javascript" src="../js/mapStyles.js"></script>
+  <body ng-app="marriageMapApp">
+    <div ui-view="navigation"></div>
+    <div ui-view="map"></div>
+    <!--<script type="text/javascript" src="../js/mapStyles.js"></script>
     <script type="text/javascript" src="../js/mapData.js"></script>
     <script type="text/javascript">
 
@@ -89,5 +103,7 @@
     <script async defer
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAPa8bSkKaRUKfLaFEfTvPud6wIe1i4dwA&callback=initMap&sensor=false">
     </script>
+    -->
+
   </body>
 </html>

@@ -6,7 +6,7 @@ html, body {
 	
 }
 
-h1 {
+/*h1 {
 	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
 	font-size: 24px;
 	font-style: normal;
@@ -45,15 +45,35 @@ pre {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 18.5714282989502px;
-}
+}*/
+
+/* BOF ----------------------------------- MAP -----------------------*/
 
 #map { 
 	height: 100%; 
 	background-color : #E9E5DC;
 }
+#map .angular-google-map-container {
+	height: 100vh;
+}
 #map * {
 
 }
+
+#searchBox {
+	top: 90px !important;
+	width: 300px;
+	height: 38px;
+	font-size: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+/* EOF ----------------------------------- MAP -----------------------*/
+
+
+/* BOF ----------------------------------- NAVIGATION -----------------------*/
 nav.navbar-default {
 	background-color: transparent;
 	border-color: transparent;
@@ -61,3 +81,49 @@ nav.navbar-default {
 
 nav.navbar-default .btn {
 }
+
+/* EOF ----------------------------------- NAVIGATION -----------------------*/
+
+/* BOF ----------------------------------- POI INFO -----------------------*/
+
+.poi-info-container .modal-title{
+	text-align : center;
+}
+
+.poi-info-container .btn{
+	width : 100%;
+}
+
+/* EOF ----------------------------------- POI INFO -----------------------*/
+
+
+/* BOF ----------------------------------- BOUTONS-----------------------*/
+.btn {
+	min-width : 7rem;
+}
+
+.btn-info, .btn-default:hover {
+	background-color : #E9E5DC;
+	color : black;
+	border : 1px solid #E9E5DC;
+}
+
+.btn-primary, .btn-info:hover {
+	background-color : #7DCDCD;
+	color : blank;
+	border : 1px solid #7DCDCD;
+}
+
+.btn-default {
+	background-color : blank;
+}
+
+/* EOF ----------------------------------- BOUTONS-----------------------*/
+
+
+/* BOF ----------------------------------- ICONES-----------------------*/
+.fa {
+	color : #7DCDCD;
+}
+/* EOF ----------------------------------- ICONES-----------------------*/
+
