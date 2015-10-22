@@ -1,14 +1,14 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
-		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+		<div class="btn-group btn-group-justified" role="group">
 			<div class="btn-group" role="group">
-				<button type="button" class="btn btn-default" ng-click="btnDayClicked()">Journée</button>
+				<button type="button" class="btn" ng-click="btnDayClicked()" ng-class="{'btn-info': poisDayDisplayed, 'btn-default': !poisDayDisplayed}">Journée</button>
 			</div>
 			<div class="btn-group" role="group">
-				<button type="button" class="btn btn-default" ng-click="btnSleepClicked()">Où dormir</button>
+				<button type="button" class="btn" ng-click="btnSleepClicked()" ng-class="{'btn-info': poisSleepDisplayed, 'btn-default': !poisSleepDisplayed}">Où dormir</button>
 			</div>
 			<div class="btn-group" role="group">
-				<button type="button" class="btn btn-default" ng-click="btnIGoClicked()">Je viens !</button>
+				<button type="button" class="btn btn-default" ng-click="btnIGoClicked()"><b>Je viens !</b></button>
 			</div>
 		</div>
 	</div>

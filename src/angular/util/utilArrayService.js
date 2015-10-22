@@ -91,6 +91,29 @@ function UtilArrayService($filter) {
         },
 
         /**
+        * Ajoute un tableau d'éléments à un autre.
+        */
+        addArrayToArray : function(array, arrayToAdd) {
+            if (array && arrayToAdd) {
+                angular.forEach(arrayToAdd, function(value, key) {
+                    array.push(value);
+                });
+            }
+        },
+
+        /**
+        * Enlève les éléments présents dans arrayToRemove de ceux présents dans array. Compare par l'attribut précisé.
+        */
+        removeArrayFromArrayByAttribute : function(attributeName, array, arrayToRemove) {
+            var that = this;
+            if (array && arrayToRemove) {
+                angular.forEach(arrayToRemove, function(value, key) {
+                    that.removeObjectByAttributeFromArray(attributeName, value[attributeName], array);
+                });
+            }
+        },
+
+        /**
         * Retourne un tableau d'id - label correspondant à chaque valeur contenue dans arrayConstant.
         * id = valeur dans arrayConstant
         * objectIdToLabel = objet comme un tableau associatif (id => label) qui pour un id renvoie le label

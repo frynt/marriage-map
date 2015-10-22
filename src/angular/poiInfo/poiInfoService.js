@@ -17,10 +17,7 @@ marriageMapApp.factory('PoiInfoService', ['$uibModal', '$log', function($uibModa
 		      }
 		    });
 
-		    modalInstance.result.then(function () {
-		    }, function () {
-	      		$log.info('Modal dismissed at: ' + new Date());
-		    });
+		    return modalInstance.result;
 		}
   	}
 	return service;

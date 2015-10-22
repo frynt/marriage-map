@@ -3,10 +3,10 @@
 	    <h2 class="modal-title">{{poi.title}}</h2>
 	</div>
 	<div class="modal-body">
-		<p class="description">{{poi.description}}</p>
-		<p class="astuces"><i class="fa fa-lightbulb-o fa-2x fa-pull-left"></i>{{poi.astuces}}</p>
+		<p class="description" ng-bind-html="poi.description | viewableHtml"></p>
+		<p class="astuces"><i class="fa fa-lightbulb-o fa-2x fa-pull-left"></i><p class="description" ng-bind-html="poi.astuces | viewableHtml"></p></p>
 	</div>
 	<div class="modal-footer">
-	    <button class="btn btn-info" type="button" ng-click="ok()">OK</button>
+	    <button class="btn btn-info" type="button" ng-click="ok()">Fermer</button>
 	</div>
 </span>

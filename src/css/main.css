@@ -80,6 +80,7 @@ nav.navbar-default {
 }
 
 nav.navbar-default .btn {
+	height : 3rem;
 }
 
 /* EOF ----------------------------------- NAVIGATION -----------------------*/
@@ -96,26 +97,41 @@ nav.navbar-default .btn {
 
 /* EOF ----------------------------------- POI INFO -----------------------*/
 
+/* BOF ----------------------------------- I-GO INFO -----------------------*/
+
+.i-go-container .modal-title{
+	text-align : center;
+}
+
+.i-go-container .btn{
+	width : 100%;
+}
+
+/* EOF ----------------------------------- I-GO INFO -----------------------*/
+
+
 
 /* BOF ----------------------------------- BOUTONS-----------------------*/
 .btn {
 	min-width : 7rem;
 }
 
-.btn-info, .btn-default:hover {
+.btn-info, .btn-default:hover, .btn-info:focus {
 	background-color : #E9E5DC;
 	color : black;
-	border : 1px solid #E9E5DC;
+	border : 2px solid rgb(189, 187, 193);
 }
 
 .btn-primary, .btn-info:hover {
 	background-color : #7DCDCD;
-	color : blank;
-	border : 1px solid #7DCDCD;
+	color : white;
+	border : 2px solid rgb(189, 187, 193);
 }
 
-.btn-default {
-	background-color : blank;
+.btn-default, .btn-default:focus {
+	background-color : white;
+	outline-color: transparent;
+	border: 2px solid rgb(189, 187, 193);
 }
 
 /* EOF ----------------------------------- BOUTONS-----------------------*/
