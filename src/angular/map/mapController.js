@@ -1,11 +1,18 @@
-marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'MapStylesService', 'MapService', 'PoiInfoService', function($scope, uiGmapGoogleMapApi, MapStylesService, MapService, PoiInfoService) {
+marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'MapStylesService', 'MapService', 'PoiInfoService', '$timeout', function($scope, uiGmapGoogleMapApi, MapStylesService, MapService, PoiInfoService, $timeout) {
 
 	// Carte
 	$scope.map = MapService.getMap();
 
 	// Options de la carte
 	$scope.options = {
-		styles :  MapStylesService.getStyles()
+		styles :  MapStylesService.getStyles(),
+		panControl : false,
+		zoomControlOptions : {
+			position : 4
+		},
+		mapTypeControlOptions : {
+			position : 9
+		}
 	};
 
 	// Points d'intérêts
@@ -80,7 +87,21 @@ marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'Map
 		$scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw,ne);
 		// EOF limiter les recherches empiriquement à la France, on déclare cela fait ici car lib google inconnu sinon
 
-		//$scope.markerOptions = { animation: google.maps.Animation.DROP };
+		// BOF set des bounds
+		$timeout(function(){
+    		$scope.bounds = {
+		      northeast: {
+		        latitude: 48.83,
+		        longitude: -3.4
+		      },
+		      southwest: {
+		        latitude: 48.78,
+		        longitude: -3.45
+		      }
+			}
+		});
+		// EOF set des bounds
+
     });
 	
 }]);

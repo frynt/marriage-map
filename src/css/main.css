@@ -2,52 +2,18 @@ html, body {
 	height: 100%; 
 	margin: 0; 
 	padding: 0; 
-	font-size : 16px;
-	
 }
 
-/*h1 {
-	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.3999996185303px;
+html,body,.btn {
+	font-family : dance_with_me_tatamedium;
+	font-size : 1.2rem;
 }
-h3 {
-	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 15.3999996185303px;
-}
-p, body {
-	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	font-size: 14px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 20px;
-}
-blockquote {
-	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	font-size: 21px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 30px;
-}
-pre {
-	font-family: Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
-	font-size: 13px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 400;
-	line-height: 18.5714282989502px;
-}*/
 
 /* BOF ----------------------------------- MAP -----------------------*/
+
+body {
+	background-color: #7DBFC6
+}
 
 #map { 
 	height: 100%; 
@@ -61,13 +27,24 @@ pre {
 }
 
 #searchBox {
-	top: 90px !important;
+	top: 140px !important;
 	width: 300px;
 	height: 38px;
 	font-size: 20px;
 	padding-left: 5px;
 	padding-right: 5px;
+	left: 50px !important;
 }
+
+.gmnoprint {
+	z-index: 461;
+}
+
+/* BOF ----------------------------------- POPUP ----------------------- */
+.modal-content,.modal-content .btn {
+	font-family : calibri;
+}
+/* EOF ----------------------------------- POPUP ----------------------- */
 
 
 /* EOF ----------------------------------- MAP -----------------------*/
@@ -77,11 +54,35 @@ pre {
 nav.navbar-default {
 	background-color: transparent;
 	border-color: transparent;
+	z-index: 1;
 }
 
 nav.navbar-default .btn {
 	height : 3rem;
+	border: 2px solid black;  border-radius: 22px;
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	font-family: calibri;
+	font-weight : normal;
+	width : 100%;
 }
+
+a.btn.btn-back-home {
+	position: absolute;
+	top: 70px;
+	left: 50px;
+	z-index:1000;
+	width: 10rem;
+	font-family: calibri;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+a.btn.btn-back-home .fa {
+	color : black;
+}
+
+
 
 /* EOF ----------------------------------- NAVIGATION -----------------------*/
 
@@ -142,4 +143,73 @@ nav.navbar-default .btn {
 	color : #7DCDCD;
 }
 /* EOF ----------------------------------- ICONES-----------------------*/
+
+
+
+/* BOF ----------------------------------- HOME ------------------------*/
+.home-header {
+	background: url("../img/home/motif.png") repeat;
+	border-color: transparent;
+	height: 170px;
+	background-size : 130px;
+	margin-top: 0px;
+}
+
+#home {
+	text-align : center;
+}
+
+#home .row {
+}
+
+.btn-home {
+	width : 85%;
+	height: 100px;
+	margin: 19px;
+	margin-top: 19px;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-family: calibri;
+	line-height: 4.2rem;
+	border-radius: 22px;
+	font-weight : bold;
+}
+
+
+.info-for-btn {
+	color : white;
+	font-size: 1.4em;
+}
+
+.image-helene-flo {
+	margin-top: 50px;
+	height : 150px;
+}
+
+.image-fleche {
+	width : 100%;
+	display:none;
+}
+
+.image-fleche-haut-bas {
+	margin-top : 50px;
+
+}
+
+@media screen and (min-width: 992px) {
+	.image-fleche {
+		display:block;
+	}
+}
+
+.iFrameIGoForm {
+	width: 100%;
+	min-height : 500px;
+}
+
+.ss-base-body div {
+	background-color: #7DBFC6 !important;
+}
+
+/* EOF ----------------------------------- HOME ------------------------*/
 

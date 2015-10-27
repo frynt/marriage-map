@@ -5,10 +5,12 @@
 <div id="map">
 
 	<ui-gmap-google-map 
+		bounds='bounds'
 		center='map.center' 
 		zoom='map.zoom'
 	 	options='options'>
 	 	<ui-gmap-markers 
+
 			models="pois" 
 			idkey="'id'" 
 			options ="'options'" 

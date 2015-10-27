@@ -1,8 +1,8 @@
 marriageMapApp.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/map");
-  //
+  $urlRouterProvider.otherwise("/home");
+
   // Now set up the states
   $stateProvider
 	.state('map', {
@@ -17,5 +17,16 @@ marriageMapApp.config(function($stateProvider, $urlRouterProvider) {
 		        controller: "MapController"
       		}
       	}
+    }).state('home', {
+    url : "/home",
+    views: {
+          'navigation': {
+            
+          },
+          'map': {
+            templateUrl: '../angular/home/home.html',
+            controller: "HomeController"
+          }
+        }
     });
 })

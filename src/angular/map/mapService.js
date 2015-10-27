@@ -1,9 +1,9 @@
 marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayService) {
 
 	var map = { 
-		center: { latitude: 48.81, longitude: -3.4240839999999753 }, 
-		zoom: 14 
-	}
+		center: { latitude: null, longitude: null }, 
+		zoom: null 
+	};
 	var poisDay = [
 		{
 			id : 10,
@@ -11,8 +11,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.8145125, 
 				longitude : -3.4440839999999753
 			},
-			icon : "../img/church/blue-church-64.png",
-			iconInverse : "../img/church/blank-church-64.png",
+			icon : "../img/church/blue-outline-church-64.png?random=" + Math.random(),
+			iconInverse : "../img/church/blank-outline-church-64.png?random=" + Math.random(),
 			options : "",
 			title : "L'église",
 			description : "Nous vous donnons rendez-vous à 11h pour la célébration qui aura lieu à l'église Saint Jacques à Perros Guirec.",
@@ -24,8 +24,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.8156313, 
 				longitude : -3.4447666
 			},
-			icon : "../img/ring/blue-ring-64.png",
-			iconInverse : "../img/ring/blank-ring-64.png",
+			icon : "../img/ring/blue-outline-ring-64.png?random=" + Math.random(),
+			iconInverse : "../img/ring/blank-outline-ring-64.png?random=" + Math.random(),
 			options : "",
 			title : "La mairie",
 			description : "Nous vous donnons rendez-vous à 10h pour la consécration ultime dans la mairie.",
@@ -37,8 +37,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.8151101, 
 				longitude : -3.4543653
 			},
-			icon : "../img/glasses/blue-glasses-64.png",
-			iconInverse : "../img/glasses/blank-glasses-64.png",
+			icon : "../img/glasses/blue-outline-glasses-64.png?random=" + Math.random(),
+			iconInverse : "../img/glasses/blank-outline-glasses-64.png?random=" + Math.random(),
 			options : "",
 			title : "Le vin d'honneur",
 			description : "Après l'église, retrouvons pour partager un moment de convivialité au palais des Congrès, 10 avenue des tgs.",
@@ -50,8 +50,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.8155061,
 				longitude : -3.3579911
 			},
-			icon : "../img/servers/blue-servers-64.png",
-			iconInverse : "../img/servers/blank-servers-64.png",
+			icon : "../img/servers/blue-outline-servers-64.png?random=" + Math.random(),
+			iconInverse : "../img/servers/blank-outline-servers-64.png?random=" + Math.random(),
 			options : "",
 			title : "Le repas",
 			description : "Nous vous proposons un repas dans la salle polyvalente de Trevou Treguignec. Ce repas comprend également le retour prévu le lendemain midi.",
@@ -65,8 +65,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.819031,
 				longitude : -3.352662
 			},
-			icon : "../img/camping/blue-camping-64.png",
-			iconInverse : "../img/camping/blank-camping-64.png",
+			icon : "../img/camping/blue-outline-camping-64.png?random=" + Math.random(),
+			iconInverse : "../img/camping/blank-outline-camping-64.png?random=" + Math.random(),
 			options : "",
 			title : "Camping le Mat",
 			description : "Entre Paimpol et Perros-Guirec, la vue sur les 7 îles est imprenable. La grande plage de sable fin de la baie de Trestel, spot reconnu par les amateurs de glisse, vous invite à la détente ou à des vacances dynamiques. C 'est la Bretagne de la Côte de Granit Rose, avec ses sentiers côtiers et ses longues balades iodées. Au camping, autour de la piscine chauffée : flânerie, aquagym, et en été, nocturnes-piscine, concerts et danses bretonnes.",
@@ -78,8 +78,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 				latitude  : 48.8180793,
 				longitude : -3.3560239
 			},
-			icon : "../img/hotel/blue-hotel-64.png",
-			iconInverse : "../img/hotel/blank-hotel-64.png",
+			icon : "../img/hotel/blue-outline-hotel-64.png?random=" + Math.random(),
+			iconInverse : "../img/hotel/blank-outline-hotel-64.png?random=" + Math.random(),
 			options : "",
 			title : "Kerbugalic",
 			description : "Idéalement situé, à 10 minutes de Lannion, de Perros-Guirec et de Tréguier, dans un parc arboré, fleuri d'environ 7000 m2, l'hôtel Kerbugalic 2 étoiles domine et offre une vue panoramique sur la baie de Trestel, ses plages de sable fin et ses rochers de granit rose. Vous y profiterez du calme et de la nature... <img src='http://www.reservation-bretagne.com/2009/images/listing_photos/76_456photo1.jpg'>",
