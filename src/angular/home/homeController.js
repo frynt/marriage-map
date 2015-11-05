@@ -1,12 +1,36 @@
-marriageMapApp.controller('HomeController', ['$scope', 'IGoService', function($scope, IGoService) {
+marriageMapApp.controller('HomeController', ['$scope', 'IGoService', '$window', function($scope, IGoService, $window) {
 
-	$scope.showIGoForm = false;
+	$scope.iGoFormURLIFrame = null;
 
-	$scope.iGoClicked = function() {
-		$scope.showIGoForm = true;
+	/**
+	* Clic sur "je viens" en mode desktop
+	*/
+	$scope.iGoClickedBigScreen = function() {
+
+		IGoService.openIGo().then(function(urlForm) {
+
+			// Ok, on ouvre en mode iFrame
+			$scope.iGoFormURLIFrame = urlForm;
+		}, function() {
+			// Cancel
+		})
 	}
 
-	$scope.closeIGoClicked = function() {
-		$scope.showIGoForm = false;
+	/**
+	* Clic sur "je viens" en mode mobile
+	*/
+	$scope.iGoClickedMinorScreen = function() {
+
+		IGoService.openIGo().then(function(urlForm) {
+
+			// Ok, on ouvre dans la même page en plein écran
+			$window.location.href = urlForm;
+		}, function() {
+			// Cancel
+		})
+	}
+
+	$scope.closeIGoClickedBigScreen = function() {
+		$scope.iGoFormURLIFrame = null;
 	}
 }]);

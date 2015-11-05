@@ -9,6 +9,22 @@ html,body,.btn {
 	font-size : 1.2rem;
 }
 
+/* BOF ----------------------------------- FORMULAIRES -----------------------*/
+
+form .form-control {
+	font-size : 1.2rem;
+}
+
+form .error {
+	color : red;
+}
+
+form input.form-control {
+	height : 60px;
+}
+
+/* EOF ----------------------------------- FORMULAIRES -----------------------*/
+
 /* BOF ----------------------------------- MAP -----------------------*/
 
 body {
@@ -216,7 +232,7 @@ a.btn.btn-back-home .fa {
 
 .iFrameIGoForm {
 	width: 100%;
-	min-height : 500px;
+	min-height: 600px;
 }
 
 .ss-base-body div {

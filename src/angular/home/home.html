@@ -1,46 +1,64 @@
 <div id="home" class="container-fluid">
-	<div class="home-header"></div>
+	<div class="home-header" ng-show="!iGoFormURLIFrame"></div>
 	<div class="intro-helene-flo">
 		<p> Hélène et Florent </p>
 		<p> 25 juin 2016 <p>
 	</div>
-	<div class="row" ng-show="!showIGoForm">
+	<div class="row" ng-show="!iGoFormURLIFrame">
 	  <div class="col-md-3"></div>
 	  <div class="col-md-4"></div>
 	  <div class="col-md-2">
   		<img class="image-fleche image-fleche-haut-bas only-big-screen" src="../img/home/fleche-haut-bas.png">
 	  </div>
-  	  <div class="col-md-3 info-for-btn">Par ici, pour nous avertir <br> de votre présence ou absence.</div>		
+  	  <div class="col-md-3 info-for-btn">
+  	  	<!-- BOF attention si modif ici modifier l'autre partie en bas -->
+  	  	<span class="only-big-screen">
+  	  		Par ici, pour nous avertir <br> de votre présence ou absence.
+  	  	</span>
+  	  	<span class="only-minor-screen">
+  	  		Par ici, toutes les informations <br> concernant la journée, l'hébergement ...
+  	  	</span>
+  	  	<!-- EOF attention si modif ici modifier l'autre partie en bas -->
+  	  </div>		
 	</div>
-	<div class="row" ng-show="!showIGoForm">
+	<div class="row" ng-show="!iGoFormURLIFrame">
 	  <div class="col-md-3"></div>
 	  <div class="col-md-3">
 	  	<a class="btn btn-default btn-home" ng-href="index.html#/map">La carte </a>
 	  </div>
 	  <div class="col-md-3">
-	  	<button class="btn btn-default btn-home only-big-screen" ng-click="iGoClicked()">Je viens !</button>
-	  	<a class="btn btn-default btn-home only-minor-screen" target="_new" ng-href="https://docs.google.com/forms/d/1tLU0hz_obDyYlK2CX8Ee-_tOLUwbovEeFLlUJIcnyW8/viewform">Je viens !</a>
+	  	<button class="btn btn-default btn-home only-big-screen" ng-click="iGoClickedBigScreen()">Je viens !</button>
+	  	<button class="btn btn-default btn-home only-minor-screen" ng-click="iGoClickedMinorScreen()">Je viens !</button>
 	  </div>
 	  <div class="col-md-3"></div>
 	</div>
-	<div class="row" ng-show="!showIGoForm">
-	  <div class="col-md-3 info-for-btn">Et là, toutes les informations <br> concernant la journée, l'hébergement ...</div>
+	<div class="row" ng-show="!iGoFormURLIFrame">
+	  	<div class="col-md-3 info-for-btn">
+	  		<!-- BOF attention si modif ici modifier l'autre partie en haut -->
+		  	<span class="only-minor-screen">
+  	  			Et là, pour nous avertir <br> de votre présence ou absence.
+	  	  	</span>
+	  	  	<span class="only-big-screen">
+	  	  		Et ici, toutes les informations <br> concernant la journée, l'hébergement ...
+	  	  	</span>
+	  	  	<!-- EOF attention si modif ici modifier l'autre partie en haut -->
+		</div>
 	  <div class="col-md-2"><img class="image-fleche image-fleche-bas-haut only-big-screen" src="../img/home/fleche-bas-haut-grande.png"></div>
 	  <div class="col-md-4"></div>
   	  <div class="col-md-3"></div>
 	</div>
-	<div class="row" ng-if="showIGoForm">
+	<div class="row" ng-if="iGoFormURLIFrame">
 		<div class="col-md-12">
-			<iframe class="iFrameIGoForm" src="https://docs.google.com/forms/d/1tLU0hz_obDyYlK2CX8Ee-_tOLUwbovEeFLlUJIcnyW8/viewform?embedded=true" frameborder="0" marginheight="0"
+			<iframe class="iFrameIGoForm" src="{{iGoFormURLIFrame}}" frameborder="0" marginheight="0"
 				 marginwidth="0">Loading...</iframe>
 		</div>
 		
 	</div>
-	<div class="row" ng-show="showIGoForm">
+	<div class="row" ng-show="iGoFormURLIFrame">
 		<div class="col-md-3">
 		</div>
 		<div class="col-md-6">
-	  		<button class="btn btn-default btn-home" ng-click="closeIGoClicked()">Fermer le formulaire</button>
+	  		<button class="btn btn-default btn-home" ng-click="closeIGoClickedBigScreen()">Fermer le formulaire</button>
   		</div>
   		<div class="col-md-3">
 		</div>

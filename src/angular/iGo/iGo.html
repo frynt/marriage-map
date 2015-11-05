@@ -3,8 +3,14 @@
 	    <h2 class="modal-title">J'indique ma venue</h2>
 	</div>
 	<div class="modal-body">
-		<p class="description">Pour indiquer ou non votre venue, nous vous invitions à cliquer sur le lien ci dessous.</p>
-		<i class="fa fa-link fa-2x"></i>&nbsp;&nbsp;<a target="_new" href="https://docs.google.com/forms/d/1tLU0hz_obDyYlK2CX8Ee-_tOLUwbovEeFLlUJIcnyW8/viewform?usp=send_form">Accès au formulaire </a>
+		<p class="description">Pour indiquer ou non votre venue, saisissez le code présent dans le faire-part.</p>
+		<form ng-submit="iGoFormSubmit()">
+			<div class="form-group">
+				<input type="text" ng-model="iGoCode" placeholder="Code..." required="true" class="form-control">
+				<div class="error">{{iGoCodeErrorMessage}}</div>
+			</div>
+			<input class="btn btn-primary" type="submit" ng-model="iGoCode" ng-disabled="iGoCodeErrorMessage != null">
+		</form>
 	</div>
 	<div class="modal-footer">
 	    <button class="btn btn-info" type="button" ng-click="ok()">Fermer</button>
