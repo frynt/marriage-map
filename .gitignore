@@ -29,3 +29,4 @@ node_modules
 # Bower Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 bower_components
+/bower_components.zip
