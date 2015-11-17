@@ -101,7 +101,7 @@ marriageMapApp.factory('MapStylesService', function() {
 		        "elementType": "labels",
 		        "stylers": [
 		            {
-		                "visibility": "off"
+		                "visibility": "on"
 		            }
 		        ]
 		    },

@@ -1,6 +1,8 @@
-marriageMapApp.controller('HomeController', ['$scope', 'IGoService', '$window', function($scope, IGoService, $window) {
+marriageMapApp.controller('HomeController', ['$scope', 'IGoService', '$window', '$stateParams', function($scope, IGoService, $window, $stateParams) {
 
 	$scope.iGoFormURLIFrame = null;
+
+	
 
 	/**
 	* Clic sur "je viens" en mode desktop

@@ -1,4 +1,5 @@
-marriageMapApp.controller('PoiInfoController', ['$scope', '$modalInstance', 'poi', function($scope, $modalInstance, poi) {
+marriageMapApp.controller('PoiInfoController', ['$scope', '$modalInstance', 'poi', '$sce', function($scope, $modalInstance, poi, $sce) {
+
 	$scope.poi = poi;
 
  	$scope.ok = function () {

@@ -1,4 +1,4 @@
-marriageMapApp.config(function($stateProvider, $urlRouterProvider) {
+marriageMapApp.config(['$stateProvider' ,'$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise("/home");
@@ -16,8 +16,14 @@ marriageMapApp.config(function($stateProvider, $urlRouterProvider) {
 		        templateUrl: '../angular/map/map.html',
 		        controller: "MapController"
       		}
-      	}
-    }).state('home', {
+  	},
+    resolve : {
+      initAngularGoogleMapService : function(initAngularGoogleMapService) { 
+        return initAngularGoogleMapService.getPromise();
+      }
+    }
+  })
+  .state('home', {
     url : "/home",
     views: {
           'navigation': {
@@ -28,5 +34,5 @@ marriageMapApp.config(function($stateProvider, $urlRouterProvider) {
             controller: "HomeController"
           }
         }
-    });
-})
+  });
+}])

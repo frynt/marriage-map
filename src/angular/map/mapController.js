@@ -1,4 +1,4 @@
-marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'MapStylesService', 'MapService', 'PoiInfoService', '$timeout', function($scope, uiGmapGoogleMapApi, MapStylesService, MapService, PoiInfoService, $timeout) {
+marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'MapStylesService', 'MapService', 'PoiInfoService', '$timeout', '$stateParams', function($scope, uiGmapGoogleMapApi, MapStylesService, MapService, PoiInfoService, $timeout, $stateParams) {
 
 	// Carte
 	$scope.map = MapService.getMap();
@@ -8,29 +8,29 @@ marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'Map
 		styles :  MapStylesService.getStyles(),
 		panControl : false,
 		zoomControlOptions : {
-			position : 4
+			position : google.maps.ControlPosition.RLEFT_TOP
 		},
 		mapTypeControlOptions : {
-			position : 9
+			position : google.maps.ControlPosition.RIGHT_TOP
 		}
 	};
 
-	// Points d'intérêts
-	$scope.pois = MapService.currentPois;
+	// BOF Boite de recherche
 	var events = {
-          places_changed: function (searchBox) {
-          	if (searchBox.getPlaces().length > 0) {
-          		$scope.map.center = {
-          			latitude: searchBox.getPlaces()[0].geometry.location.lat(),
-          			longitude: searchBox.getPlaces()[0].geometry.location.lng()
-          		}
-          	} else {
-          		console.warn("Pas de places trouvées");
-          	}
-          }
-        }
+      places_changed: function (searchBox) {
+      	if (searchBox.getPlaces().length > 0) {
+      		$scope.map.center = {
+      			latitude: searchBox.getPlaces()[0].geometry.location.lat(),
+      			longitude: searchBox.getPlaces()[0].geometry.location.lng()
+      		}
+      	} else {
+      		console.warn("Pas de places trouvées");
+      	}
+      }
+    };
 
-    // Boite de recherche
+	// EOF Boite de recherche
+
 	$scope.searchbox = { 
     	template : 'searchboxContainer', 
     	events : events,
@@ -38,6 +38,33 @@ marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'Map
     		bounds : null
     	}
 	};
+
+	// BOF limiter les recherches empiriquement à la France
+	var ne = new google.maps.LatLng(52.802761, 12.502441);// LatLng of the south-west corder of France
+	var sw = new google.maps.LatLng(42.195969, -5.679932);// LatLng of the south-west corder of France
+	$scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw,ne);
+	// EOF limiter les recherches empiriquement à la France
+
+	// BOF set des bounds
+	$timeout(function(){
+		$scope.bounds = {
+	      northeast: {
+	        latitude: 48.83,
+	        longitude: -3.37
+	      },
+	      southwest: {
+	        latitude: 48.78,
+	        longitude: -3.45
+	      }
+		};
+	});
+	// EOF set des bounds
+
+	// Points d'intérêts
+	$scope.pois = MapService.currentPois;
+	
+
+   
     
     // Quand on clique sur un POI
 	$scope.poiClicked = function(marker) {
@@ -78,30 +105,7 @@ marriageMapApp.controller('MapController', ['$scope', 'uiGmapGoogleMapApi', 'Map
     	marker.setIcon(marker.model.icon);
 	}
 
-	// Une fois que angular google map est totalement chargé
-	uiGmapGoogleMapApi.then(function(maps) {
-		
-		// BOF limiter les recherches empiriquement à la France, on déclare cela fait ici car lib google inconnu sinon
-		var ne = new google.maps.LatLng(52.802761, 12.502441);// LatLng of the south-west corder of France
-		var sw = new google.maps.LatLng(42.195969, -5.679932);// LatLng of the south-west corder of France
-		$scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw,ne);
-		// EOF limiter les recherches empiriquement à la France, on déclare cela fait ici car lib google inconnu sinon
+	
 
-		// BOF set des bounds
-		$timeout(function(){
-    		$scope.bounds = {
-		      northeast: {
-		        latitude: 48.83,
-		        longitude: -3.4
-		      },
-		      southwest: {
-		        latitude: 48.78,
-		        longitude: -3.45
-		      }
-			}
-		});
-		// EOF set des bounds
-
-    });
 	
 }]);

@@ -1,10 +1,17 @@
 <span class=" poi-info-container">
 	<div class="modal-header">
 	    <h2 class="modal-title">{{poi.title}}</h2>
+	    <div class="distance">
+			<p>{{poi.distance}}</p>
+	 	</div>
 	</div>
 	<div class="modal-body">
-		<p class="description" ng-bind-html="poi.description | viewableHtml"></p>
-		<p class="astuces"><i class="fa fa-lightbulb-o fa-2x fa-pull-left"></i><p class="description" ng-bind-html="poi.astuces | viewableHtml"></p></p>
+		
+		<p class="description" ng-bind-html="poi.description"></p>
+		<div class="astuces" ng-repeat="astuce in poi.astuces">
+			<i class="fa fa-lightbulb-o fa-2x fa-pull-left"></i>
+			<p class="description" ng-bind-html="astuce | viewableHtml"></p>
+		</div>
 	</div>
 	<div class="modal-footer">
 	    <button class="btn btn-info" type="button" ng-click="ok()">Fermer</button>

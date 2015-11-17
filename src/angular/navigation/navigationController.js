@@ -1,4 +1,4 @@
-marriageMapApp.controller('NavigationController', ['$scope', 'MapService', 'IGoService', function($scope, MapService, IGoService) {
+marriageMapApp.controller('NavigationController', ['$scope', 'MapService', 'IGoService', '$stateParams', '$location', function($scope, MapService, IGoService, $stateParams, $location) {
 
 	//TODO service doit savoir, pas le controller
 	$scope.poisDayDisplayed = true;
@@ -19,4 +19,5 @@ marriageMapApp.controller('NavigationController', ['$scope', 'MapService', 'IGoS
 	$scope.btnIGoClicked = function() {
 		IGoService.openIGo();
 	}
+
 }]);

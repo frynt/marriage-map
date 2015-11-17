@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="icon" href="../../src/img/blank-ring-ico.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Hélène et Florent</title>
+
 
     <!-- Bootstrap -->
     <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,6 +22,8 @@
 
     <!-- BOF angular libs -->
     <script src="../../bower_components/angular/angular.min.js"></script>
+
+    <script src="../../bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src='../../bower_components/lodash/lodash.min.js'></script>
     <script src='../../bower_components/angular-simple-logger/dist/angular-simple-logger.min.js'></script>
@@ -32,7 +36,9 @@
 
     <!-- BOF angular app -->
     <script src="../../src/angular/app/app.js"></script>
+<script src="../../src/angular/map/initAngularGoogleMapService.js"></script>
     <script src="../../src/angular/app/conf.js"></script>
+    
     <script src="../../src/angular/app/routes.js"></script>
 
     <!-- BOF angular utils -->
@@ -60,6 +66,7 @@
     <script src="../../src/angular/map/mapController.js"></script>
     <script src="../../src/angular/map/mapStylesService.js"></script>
     <script src="../../src/angular/map/mapService.js"></script>
+
     <!-- EOF map -->
 
     <!-- BOF poiInfo -->
