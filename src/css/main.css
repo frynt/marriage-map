@@ -57,6 +57,10 @@ body {
 	z-index: 461;
 }
 
+.gm-style-mtc > * {
+	font-size: 18px !important;
+}
+
 /* BOF ----------------------------------- POPUP ----------------------- */
 .modal-content,.modal-content .btn {
 	font-family : calibri;

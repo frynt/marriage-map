@@ -8,15 +8,15 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 		{
 			id : 10,
 			coords : {
-				latitude  : 48.8145125, 
-				longitude : -3.4440839999999753
+				latitude  : 48.8143725, 
+				longitude : -3.4430839999999753
 			},
 			icon : "../img/church/blue-outline-church-64.png?random=" + Math.random(),
 			iconInverse : "../img/church/blank-outline-church-64.png?random=" + Math.random(),
 			options : "",
 			title : "L'église",
 			description : "Nous vous donnons rendez-vous à 10h45 pour la célébration qui aura lieu à l'église Saint Jacques à Perros Guirec.",
-			astuces : ["Pour vous garer, pensez au parking du Carrefour City, derrière l'église (place des halles) ou dans le centre ville."]
+			astuces : ["Pour vous garer, pensez au parking du Carrefour City, ou celui derrière l'église (place des halles) ou dans le centre ville."]
 		},
 		{
 			id : 20,
@@ -62,8 +62,8 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 		{
 			id : 100,
 			coords : {
-				latitude  : 48.819031,
-				longitude : -3.352662
+				latitude  : 48.819331,
+				longitude : -3.352362
 			},
 			icon : "../img/camping/blue-outline-camping-64.png?random=" + Math.random(),
 			iconInverse : "../img/camping/blank-outline-camping-64.png?random=" + Math.random(),
@@ -76,16 +76,16 @@ marriageMapApp.factory('MapService', ['UtilArrayService', function(UtilArrayServ
 		{
 			id : 110,
 			coords : {
-				latitude  : 48.8180793,
-				longitude : -3.3560239
+				latitude  : 48.8189145,
+				longitude : -3.3538073
 			},
 			icon : "../img/hotel/blue-outline-hotel-64.png?random=" + Math.random(),
 			iconInverse : "../img/hotel/blank-outline-hotel-64.png?random=" + Math.random(),
 			options : "",
-			distance : "à 400 m de la salle",
-			title : "Kerbugalic",
-			description : "<i>Idéalement situé, à 10 minutes de Lannion, de Perros-Guirec et de Tréguier, dans un parc arboré, fleuri d'environ 7000 m2, l'hôtel Kerbugalic 2 étoiles domine et offre une vue panoramique sur la baie de Trestel, ses plages de sable fin et ses rochers de granit rose. Vous y profiterez du calme et de la nature...</i><br><img src='../../src/img/addresses/kerbugalic.jpg'>",
-			astuces : ["<a target='_new' href ='http://www.tripadvisor.fr/Hotel_Review-g1200987-d1432136-Reviews-Kerbugalic-Trevou_Treguignec_Perros_Guirec_Cotes_d_Armor_Brittany.html'>Consulter le site internet (nouvel onglet)</a>"]
+			distance : "à 600 m de la salle",
+			title : "Les Terrasses de Trestel",
+			description : "<i>Entre Tréguier et Perros-Guirec, en bordure d'une magnifique plage de sable fin, la Résidence Hôtelière «les terrasses de Trestel» vous ouvre les portes de la côte de Granit Rose. Vous aurez le bonheur d'habiter une maisonnette ou un appartement au coeur d'un grand jardin devant la mer.</i><br><img src='../../src/img/addresses/trestel.jpg'>",
+			astuces : ["<a target='_new' href ='http://location-bord-de-mer-appartement-vacances-piscine-tourisme.terrasses-trestel.fr/'>Consulter le site internet (nouvel onglet)</a>"]
 		},
 		{
 			id : 120,
