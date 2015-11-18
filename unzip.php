@@ -1,6 +1,6 @@
 <?php 
 $zip = new ZipArchive;
-$res = $zip->open('todezip.zip');
+$res = $zip->open('marriage-map.zip');
 if ($res === TRUE) {
   $zip->extractTo('.');
   $zip->close();
