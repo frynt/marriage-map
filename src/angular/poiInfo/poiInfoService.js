@@ -6,7 +6,7 @@ marriageMapApp.factory('PoiInfoService', ['$uibModal', '$log', function($uibModa
 		*/
 		openInfo : function(poi) {
 			var modalInstance = $uibModal.open({
-		      templateUrl: '../angular/poiInfo/poiInfo.html?' + "random=" + Math.random(),
+		      templateUrl: 'angular/poiInfo/poiInfo.html',
 		      controller: 'PoiInfoController',
 		      size: 'md',
 		      backdrop : true,

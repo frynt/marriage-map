@@ -1,8 +1,8 @@
 
-	<script type="text/ng-template" id="searchboxContainer">
-    	<input type="text" placeholder="Recherche" id="searchBox" class="only-big-screen">
-	</script>
-<div id="map">
+<script type="text/ng-template" id="searchboxContainer">
+	<input type="text" placeholder="Recherche" id="searchBox" class="only-big-screen">
+</script>
+<div id="map" ng-class="{'disabled' : mapDisabled()}">
 
 	<ui-gmap-google-map 
 		bounds='bounds'
@@ -20,7 +20,8 @@
 			click="poiClicked" 
 			labelContent="'work'"
         	labelVisible="true"
-        	events="mouseEventsObject"></ui-gmap-markers>
+        	events="mouseEventsObject" 
+        	fit="fitMarkers"></ui-gmap-markers>
 
         <ui-gmap-search-box
         template="searchbox.template"

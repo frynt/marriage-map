@@ -44,7 +44,7 @@
 		*/
 		openIGo : function() {
 			var modalInstance = $uibModal.open({
-		      templateUrl: '../angular/iGo/iGo.html?' + "random=" + Math.random(),
+		      templateUrl: 'angular/iGo/iGo.html',
 		      controller: 'IGoController',
 		      size: 'md',
 		      backdrop : true,

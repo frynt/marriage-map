@@ -1,16 +1,16 @@
 <span class=" poi-info-container">
 	<div class="modal-header">
-	    <h2 class="modal-title">{{poi.title}}</h2>
-	    <div class="distance">
-			<p>{{poi.distance}}</p>
+		<div class="modal-title">
+		    <h2><i>{{poi.distance}}</i></h2>
+		 	<h2>{{poi.title}}</h2>
 	 	</div>
 	</div>
 	<div class="modal-body">
 		
 		<p class="description" ng-bind-html="poi.description"></p>
 		<div class="astuces" ng-repeat="astuce in poi.astuces">
-			<i class="fa fa-lightbulb-o fa-2x fa-pull-left"></i>
-			<p class="description" ng-bind-html="astuce | viewableHtml"></p>
+			<i class="fa fa-2x fa-pull-left" ng-class="{'fa-lightbulb-o' : astuce.type==constantService.astuceTypeAstuce, 'fa-phone' : astuce.type==constantService.astuceTypePhone, 'fa-external-link' : astuce.type==constantService.astuceTypeWebsite}"></i>
+			<p class="description" ng-bind-html="astuce.value | viewableHtml"></p>
 		</div>
 	</div>
 	<div class="modal-footer">

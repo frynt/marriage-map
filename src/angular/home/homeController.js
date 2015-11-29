@@ -11,8 +11,11 @@ marriageMapApp.controller('HomeController', ['$scope', 'IGoService', '$window', 
 
 		IGoService.openIGo().then(function(urlForm) {
 
+			// BOF retour utilisateur : on ouvre tjs dans la même fenetre
 			// Ok, on ouvre en mode iFrame
-			$scope.iGoFormURLIFrame = urlForm;
+			//$scope.iGoFormURLIFrame = urlForm;
+			$window.location.href = urlForm;
+			// EOF retour utilisateur : on ouvre tjs dans la même fenetre
 		}, function() {
 			// Cancel
 		})

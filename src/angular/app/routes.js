@@ -9,11 +9,11 @@ marriageMapApp.config(['$stateProvider' ,'$urlRouterProvider', function($statePr
 		url : "/map",
 		views: {
       		'navigation': {
-		        templateUrl: '../angular/navigation/navigation.html',
+		        templateUrl: 'angular/navigation/navigation.html',
 		        controller: "NavigationController"
       		},
       		'map': {
-		        templateUrl: '../angular/map/map.html',
+		        templateUrl: 'angular/map/map.html',
 		        controller: "MapController"
       		}
   	},
@@ -30,7 +30,7 @@ marriageMapApp.config(['$stateProvider' ,'$urlRouterProvider', function($statePr
             
           },
           'map': {
-            templateUrl: '../angular/home/home.html',
+            templateUrl: 'angular/home/home.html',
             controller: "HomeController"
           }
         }

@@ -1,0 +1,287 @@
+html, body { 
+	height: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+
+html,body,.btn {
+	font-family : dance_with_me_tatamedium;
+	font-size : 1.2rem;
+}
+
+/* BOF ----------------------------------- FORMULAIRES -----------------------*/
+
+form .form-control {
+	font-size : 1.2rem;
+}
+
+form .error {
+	color : red;
+}
+
+form input.form-control {
+	height : 60px;
+}
+
+/* EOF ----------------------------------- FORMULAIRES -----------------------*/
+
+/* BOF ----------------------------------- MAP -----------------------*/
+
+body {
+	background-color: #7DBFC6;
+}
+
+#map { 
+	height: 100%; 
+	background-color : #E9E5DC;
+}
+
+#map.disabled {
+    opacity: 0.3;
+}
+#map .angular-google-map-container {
+	height: 100vh;
+	margin-top: 59px;
+}
+
+#searchBox {
+	top: 100px !important;
+	width: 300px;
+	height: 38px;
+	font-size: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	left: 95px !important;
+}
+
+.gmnoprint {
+	z-index: 461;
+}
+
+.gm-style-mtc > * {
+	font-size: 18px !important;
+}
+
+/* BOF ----------------------------------- POPUP ----------------------- */
+.modal-content,.modal-content .btn {
+	font-family : calibri;
+}
+/* EOF ----------------------------------- POPUP ----------------------- */
+
+
+/* EOF ----------------------------------- MAP -----------------------*/
+
+
+/* BOF ----------------------------------- NAVIGATION -----------------------*/
+nav.navbar-default {
+	background-color: white;
+	border-color: transparent;
+	z-index: 1;
+	border: 1px solid black;
+}
+
+nav.navbar-default .btn {
+	height : 3rem;
+	border: 2px solid black;  border-radius: 22px;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	font-family: calibri;
+	font-weight: bold;
+	width : 100%;
+}
+
+a.btn.btn-back-home {
+	position: absolute;
+	top: 110px;
+	left: 95px;
+	z-index:1000;
+	width: 10rem;
+	font-family: calibri;
+	border: 1px solid black;
+	border-radius: 10px;
+	font-size: 1.0rem;
+}
+
+a.btn.btn-back-home .fa {
+	color : black;
+}
+
+
+
+/* EOF ----------------------------------- NAVIGATION -----------------------*/
+
+/* BOF ------------------------------------ MAP -----------------------------*/
+.angular-google-map-container .gm-style-cc span {
+	font-size : 30px;
+}
+
+/* BOF ----------------------------------- POI INFO -----------------------*/
+
+.poi-info-container .modal-title{
+	text-align : center;
+}
+
+.poi-info-container .btn{
+	width : 100%;
+}
+
+.poi-info-container .astuces{
+	padding-top: 20px;
+}
+
+.poi-info-container .distance{
+	text-align: center;
+}
+
+.poi-info-container .distance *{
+	display : inline-block;
+}
+
+.poi-info-container .modal-header h2{
+    margin-top: 0px;
+}
+
+.poi-info-container img{
+	width : 100%;
+}
+
+/* EOF ----------------------------------- POI INFO -----------------------*/
+
+/* BOF ----------------------------------- I-GO INFO -----------------------*/
+
+.i-go-container .modal-title{
+	text-align : center;
+}
+
+.i-go-container .btn{
+	width : 100%;
+}
+
+/* EOF ----------------------------------- I-GO INFO -----------------------*/
+
+
+
+/* BOF ----------------------------------- BOUTONS-----------------------*/
+.btn {
+	min-width : 7rem;
+}
+
+.btn-info, .btn-default:hover, .btn-info:focus {
+	background-color : #E9E5DC;
+	color : black;
+	border : 2px solid rgb(189, 187, 193);
+}
+
+.btn-primary, .btn-info:hover {
+	background-color : #7DCDCD;
+	color : white;
+	border : 2px solid rgb(189, 187, 193);
+}
+
+.btn-default, .btn-default:focus {
+	background-color : white;
+	outline-color: transparent;
+	border: 2px solid rgb(189, 187, 193);
+}
+
+/* EOF ----------------------------------- BOUTONS-----------------------*/
+
+
+/* BOF ----------------------------------- ICONES-----------------------*/
+.fa {
+	color : #7DCDCD;
+}
+/* EOF ----------------------------------- ICONES-----------------------*/
+
+
+
+/* BOF ----------------------------------- HOME ------------------------*/
+.home-header {
+	background: url("img/home/motif.png") repeat;
+	border-color: transparent;
+	height: 160px;
+	background-size: 122px;
+	margin-top: 0px;
+}
+
+#home {
+	text-align : center;
+}
+
+#home .row {
+}
+
+.btn-home {
+	width: 95%;
+	height: 100px;
+	margin: 19px;
+	margin-top: 19px;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-family: calibri;
+	line-height: 4.2rem;
+	border-radius: 22px;
+	font-weight : bold;
+}
+
+
+.info-for-btn {
+	color : white;
+	font-size: 1.4em;
+}
+
+.intro-helene-flo {
+	margin-top: 50px;
+	font-size: 3rem;
+	color : white;
+}
+
+.image-fleche {
+	width : 100%;
+}
+
+.only-big-screen {
+	display : none;
+}
+.only-minor-screen {
+	display : inline-block;
+}
+
+.image-fleche-haut-bas {
+	margin-top : 50px;
+
+	height: 178px;
+}
+
+@media screen and (min-width: 992px) {
+	.only-big-screen {
+		display : inline-block;
+	}
+	.only-minor-screen  {
+		display : none;
+	}
+}
+
+.iFrameIGoForm {
+	width: 100%;
+	min-height: 600px;
+}
+
+.ss-base-body div {
+	background-color: #7DBFC6 !important;
+}
+
+/* EOF ----------------------------------- HOME ------------------------*/
+
+@font-face {
+    font-family: 'dance_with_me_tatamedium';
+    src: url('font/dance_with_me_tata/dance_with_me_tata-webfont.eot');
+    src: url('font/dance_with_me_tata/dance_with_me_tata-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/dance_with_me_tata/dance_with_me_tata-webfont.woff2') format('woff2'),
+         url('font/dance_with_me_tata/dance_with_me_tata-webfont.woff') format('woff'),
+         url('font/dance_with_me_tata/dance_with_me_tata-webfont.ttf') format('truetype'),
+         url('font/dance_with_me_tata/dance_with_me_tata-webfont.svg#dance_with_me_tatamedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
